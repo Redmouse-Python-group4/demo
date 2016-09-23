@@ -1,0 +1,17 @@
+import math
+
+print math.pi
+print "hello"
+h="hello"
+print 1+9
+print 's'+'e'
+p=12
+o=12
+print int(str(p))+int(str(o))
+print"kjfkdjfkjd\nrirtoritorit"
+print len(str(p))
+print 'l' in 'hello'
+print 'a' in 'hello'
+print h.replace('l', 'p')
+print h.split('e')
+print h[1]
