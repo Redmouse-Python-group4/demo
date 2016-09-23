@@ -2,7 +2,7 @@ import math
 
 print math.pi
 h="hello"
-print 1+9
+print 1+9*12
 print 's'+'e'
 p=12
 o=12
