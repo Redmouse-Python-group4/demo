@@ -1,0 +1,25 @@
+итого 31548
+drwxr-xr-x 19 pehas pehas     4096 Sep 28 20:11 .
+drwxr-xr-x 55 pehas pehas     4096 Oct  5 00:13 ..
+drwxrwxr-x  3 pehas pehas     4096 Sep 26 20:58 12
+drwxrwxr-x 27 pehas pehas     4096 Jun 14 01:30 back
+drwxrwxr-x 27 pehas pehas     4096 Jun 14 02:23 back2
+-rw-r--r--  1 pehas pehas 32111060 May  4 02:22 city_taxi_db1.psql
+drwxrwxr-x  5 pehas pehas     4096 Jun 13 01:28 ct_core_p
+-rw-rw-r--  1 pehas pehas    12288 Jul 21 19:36 db1.db
+drwxrwxr-x  4 pehas pehas     4096 Mar 11  2016 django_proj
+drwxrwxr-x  4 pehas pehas     4096 Jun  1 23:57 easytaxi_frontpage
+drwxrwxr-x  4 pehas pehas     4096 Apr  7 20:17 first_proj
+drwxrwxr-x  4 pehas pehas     4096 Oct  5 19:19 group4
+drwxrwxr-x  3 pehas pehas     4096 Sep 23 20:03 group4_tmp
+-rw-rw-r--  1 pehas pehas      206 Feb 29  2016 inde.html
+-rw-rw-r--  1 pehas pehas        0 Feb 22  2016 kl.txt
+drwxrwxr-x  8 pehas pehas     4096 May  4 23:28 Leaflet.label
+drwxrwxr-x  2 pehas pehas     4096 Mar 16  2016 lesson7
+drwxrwxr-x  3 pehas pehas     4096 Jul 14 19:48 python
+drwxrwxr-x  6 pehas pehas     4096 Sep 28 21:08 python_kurs
+drwxrwxr-x  8 pehas pehas     4096 Aug 16 20:11 rtt
+-rw-rw-r--  1 pehas pehas    98690 Jun 21 13:38 socket.io.js
+drwxrwxr-x  3 pehas pehas     4096 Jul 12 20:59 tmp
+drwxrwxr-x  3 pehas pehas     4096 Mar  1  2016 tmp2
+drwxrwxr-x  2 pehas pehas     4096 Jul  7 20:01 tr
