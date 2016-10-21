@@ -1,0 +1,18 @@
+ <html>
+ <head></head>
+ <body>
+ 
+ 
+ {% for i in pages %}
+ <h1>{{ i.id }}</h1>
+ <p>{{ i.title }}</p>
+ {% endfor %}
+ {{request.get_host}}
+ {{request.method}} 
+ {{request.COOKIES}}
+ 
+ {{request.META.SERVER_PORT}}
+ {{request.META.HTTP_USER_AGENT}}
+ 
+ </body>
+ </html>
