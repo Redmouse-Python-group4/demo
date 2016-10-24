@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+</head>
+<body>
+{% for article in articles %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.body }}</p>
+{% empty %}
+    <p>Not public article</p>
+{% endfor %}
+</body>
+</html>
