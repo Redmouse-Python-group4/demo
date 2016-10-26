@@ -1,0 +1,10 @@
+{% extends 'loyout.html' %}
+{% block "title" %}{{ article.title }}{% endblock %}
+{% block "slogan" %}{{ block.super }}jhjhjhjh{% endblock %}
+{% block "content" %}
+    <h1>{{ article.title }}</h1>
+    <p>Date create:{{ article.date_create }}</p>
+    <p>Date update:{{ article.date_update }}</p>
+    <p>{{ article.body }}</p>
+{#    jshjshdshjdhsjdhj#}
+{% endblock %}

@@ -17,9 +17,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import index, get_article
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'article/([0-9]+)', get_article)
+# ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ]

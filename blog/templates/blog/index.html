@@ -1,0 +1,12 @@
+{% extends "loyout.html" %}
+
+{%block "content" %}
+
+    {% for article in articles %}
+    <h1>{{ article.title|upper }}</h1>
+    <p>{{ article.body|truncatewords:"1" }}</p>
+    {% empty %}
+    <p>Not public article</p>
+    {% endfor %}
+
+{% endblock %}
