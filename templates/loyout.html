@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block "title" %}Index page{% endblock %}</title>
+    <link rel="stylesheet" type="text/css"  href="{% static "css/style.css" %}">
+
+</head>
+<body>
+{% block "header" %}
+    <div>
+        <div>{% block "logo" %}LOGO{%endblock%}</div>
+        <div>{% block "slogan" %}
+            This is my site!
+        {% endblock %}</div>
+    </div>
+{% endblock %}
+{% block "category" %}
+    <ul>
+    {% for i in category %}
+        <li>{{ i.name }}
+    {% endfor %}
+    </ul>
+{% endblock %}
+{% block "content"%}{% endblock %}
+</body>
+</html>
