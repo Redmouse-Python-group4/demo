@@ -6,5 +6,26 @@
     <p>Date create:{{ article.date_create }}</p>
     <p>Date update:{{ article.date_update }}</p>
     <p>{{ article.body }}</p>
-{#    jshjshdshjdhsjdhj#}
+    <div>
+    <form action="/comments/{{ article.id }}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Отправить">
+    </form>
+    </div>
+    <div>
+
+    <input id="article_id" type="hidden" value="{{ article.id }}">
+    <script type="application/javascript">
+        var tmp = document.getElementById('article_id').val()
+    </script>
+
+    <ul>
+    {% for c in comments %}
+        <li>{{ c.body }}</li>
+    {% empty %}
+        <p>Not comments</p>
+    {% endfor %}
+    </ul>
+    </div>
 {% endblock %}

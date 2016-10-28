@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -27,3 +28,13 @@ class Category(models.Model):
 
     def __str__(self):
         return "%s(%s)"%(self.name, self.slug)
+
+
+class Comment(models.Model):
+    body = models.TextField()
+    article_id = models.ForeignKey(Article)
+    enable = models.BooleanField(default=False)
+    author = models.ForeignKey(User, blank=True, null=True, default=None)
+
+    def __str__(self):
+        return "Comments to %s"%self.article_id.title

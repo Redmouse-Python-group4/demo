@@ -16,13 +16,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from blog.views import index, get_article
+from blog.views import index, get_article, create_comments, article_edit
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
-    url(r'article/([0-9]+)', get_article)
+    url(r'article/([0-9]+)/$', get_article),
+    url(r'article/([0-9]+)/edit/$', article_edit),
+    url(r'^comments/([0-9]+)$', create_comments)
 # ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ]
