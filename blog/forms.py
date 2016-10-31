@@ -1,4 +1,4 @@
-from blog.models import Comment, Article
+from blog.models import Comment, Article, Reting
 from django import forms
 
 class  CommentsForm(forms.ModelForm):
@@ -11,3 +11,10 @@ class  ArticleForm(forms.ModelForm):
     class Meta:
         model=Article
         fields = ('title', 'body', 'is_active', 'category')
+
+
+
+class RaitingForm(forms.ModelForm):
+    class Meta:
+        model=Reting
+        fields = ('mark',)

@@ -10,16 +10,16 @@
 <body>
 {% block "header" %}
     <div>
-        <div>{% block "logo" %}LOGO{%endblock%}</div>
+        <div>{% block "logo" %}<a href="{% url 'blog:index' %}">LOGO</a>{%endblock%}</div>
         <div>{% block "slogan" %}
-            This is my site!
+            <a href="{% url 'blog:about_me' %}">This is my site!</a>
         {% endblock %}</div>
     </div>
 {% endblock %}
 {% block "category" %}
     <ul>
     {% for i in category %}
-        <li>{{ i.name }}
+        <li><a href="{% url "blog:get_category_article" i.id %}">{{ i.name }}</a>
     {% endfor %}
     </ul>
 {% endblock %}

@@ -3,7 +3,7 @@
 {%block "content" %}
 
     {% for article in articles %}
-    <h1>{{ article.title|upper }}</h1>
+    <a href="{% url "blog:get_article" article.id %}"><h1>{{ article.title|upper }}</h1></a>
     <p>{{ article.body|truncatewords:"1" }}</p>
     {% empty %}
     <p>Not public article</p>

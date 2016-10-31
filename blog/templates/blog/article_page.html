@@ -5,9 +5,15 @@
     <h1>{{ article.title }}</h1>
     <p>Date create:{{ article.date_create }}</p>
     <p>Date update:{{ article.date_update }}</p>
+    <p>Rating: {{ article.get_rating }}</p>
     <p>{{ article.body }}</p>
     <div>
-    <form action="/comments/{{ article.id }}" method="post">
+    <form action="{% url 'blog:set_rating' article.id %}" method="post">
+        {% csrf_token %}
+        {{ rating_form }}
+        <input type="submit" value="Проголосовать">
+    </form>
+    <form action="{% url 'blog:set_comment' article.id %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Отправить">
