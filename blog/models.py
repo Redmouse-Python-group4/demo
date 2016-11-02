@@ -25,6 +25,7 @@ class Article (models.Model):
     def get_rating(self):
         rating = Reting.objects.filter(article=self).aggregate(sum_mark=Sum('mark'))
         return rating['sum_mark']
+    get_rating.short_description="Rating"
 
 
 class Category(models.Model):
