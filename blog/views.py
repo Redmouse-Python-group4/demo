@@ -4,6 +4,7 @@ from blog.forms import CommentsForm, ArticleForm, RaitingForm
 from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Article, Comment, Category
 from django.views.generic import TemplateView, View
+from django.views.decorators.cache import cache_page
 # Create your views here.
 
 
@@ -16,6 +17,7 @@ def get_category_article(request, category_id):
     articles=Article.objects.filter(is_active=True, category=category)
     return render(request, 'blog/index.html', {'articles': articles})
 
+@cache_page(60 * 2, key_prefix="cash_file")
 def get_article(request, article_id):
     # article=Article.objects.get(id=article_id)
     article=get_object_or_404(Article,id=article_id)
