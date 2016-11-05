@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Article, Comment, Category
 from django.views.generic import TemplateView, View
 from django.views.decorators.cache import cache_page
+from django.utils.translation import ugettext
 # Create your views here.
 
 
@@ -13,6 +14,7 @@ def index(request):
     return render(request, 'blog/index.html', {'articles': articles})
 
 def get_category_article(request, category_id):
+    text = ugettext("TEXT")
     category=get_object_or_404(Category, pk=category_id)
     articles=Article.objects.filter(is_active=True, category=category)
     return render(request, 'blog/index.html', {'articles': articles})

@@ -22,5 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('blog.urls', namespace='blog')),
+    url(r'^local/', include('django.conf.urls.i18n')),
     # ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ]

@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'comments/([0-9]+)/$', views.create_comments, name="set_comment"),
     url(r'rating/([0-9]+)/$', views.set_rating, name="set_rating"),
     url(r'about_me/$', views.AboutMe.as_view(),name="about_me" ),
-    url(r'$', cache_page(60*15)(views.index), name="index"),
+    url(r'$', views.index, name="index"),
+    # url(r'$', cache_page(60*15)(views.index), name="index"),
 
 ]
